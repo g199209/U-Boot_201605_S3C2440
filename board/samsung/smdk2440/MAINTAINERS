@@ -1,0 +1,6 @@
+SMDK2440 BOARD
+M:	Mingfei Gao  <G199209@gmail.com>
+S:	Maintained
+F:	board/samsung/smdk2440/
+F:	include/configs/smdk2440.h
+F:	configs/smdk2440_defconfig
