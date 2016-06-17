@@ -35,9 +35,12 @@
 # Other files
 *.cmd
 *.d
+*.map
 .config*
 generated/
 include/config/cmd/
 include/config/sys/
-
+u-boot*
+*asm-offsets*
+/include/config/
 
