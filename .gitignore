@@ -37,4 +37,7 @@
 *.d
 .config*
 generated/
+include/config/cmd/
+include/config/sys/
+
 
