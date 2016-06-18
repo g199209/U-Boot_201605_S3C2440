@@ -43,4 +43,4 @@ include/config/sys/
 u-boot*
 *asm-offsets*
 /include/config/
-
+*.swp

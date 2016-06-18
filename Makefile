@@ -246,6 +246,8 @@ ifeq ($(HOSTARCH),$(ARCH))
 CROSS_COMPILE ?=
 endif
 
+CROSS_COMPILE = "/home/gmf/uboot/toolchain/x-tools/arm-s3c2440-linux-gnueabi/bin/arm-s3c2440-linux-gnueabi-"
+
 KCONFIG_CONFIG	?= .config
 export KCONFIG_CONFIG
 
