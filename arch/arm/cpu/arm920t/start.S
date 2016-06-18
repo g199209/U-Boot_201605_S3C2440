@@ -83,12 +83,41 @@ copyex:
 	ldr	r0, =INTSUBMSK
 	str	r1, [r0]
 # endif
+/* Initialize Clock */
+# if defined(CONFIG_S3C2440)
+	#define MPLLCON	0x4C000004
+	#define UPLLCON	0x4C000008
+
+	#define S3C2440_MPLL_400M ((92 << 12) | (1 << 4) | (1))
+	#define S3C2440_UPLL_48M  ((56 << 12) | (2 << 4) | (2))		
 
 	/* FCLK:HCLK:PCLK = 1:4:8 */
-	/* FCLK is 400 MHz ! */
 	ldr	r0, =CLKDIVN
 	mov	r1, #5
 	str	r1, [r0]
+
+	/* MMU Set Async Bus Mode */
+	mrc	p15, 0, r0, c1, c0, 0
+	orr	r0, r0, #0xC0000000
+	mcr	p15, 0, r0, c1, c0, 0
+
+	/* Set PLL */
+	ldr	r0, =MPLLCON
+	ldr	r1, =S3C2440_MPLL_400M
+	str	r1, [r0]
+
+	ldr	r0, =UPLLCON
+	ldr	r1, =S3C2440_UPLL_48M
+	str	r1, [r0]
+
+# else
+	/* FCLK:HCLK:PCLK = 1:2:4 */
+	/* defualt FCLK is 120 MHz ! */
+	ldr	r0, =CLKDIVN
+	mov	r1, #3
+	str	r1, [r0]
+# endif
+
 #endif	/* CONFIG_S3C24X0 */
 
 	/*
