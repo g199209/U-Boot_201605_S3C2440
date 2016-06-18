@@ -9,6 +9,9 @@
  * David Mueller, ELSOFT AG, <d.mueller@elsoft.ch>
  *
  * SPDX-License-Identifier:	GPL-2.0+
+ * 
+ * Modified for the Samsung SMDK2440 by
+ * Mingfei Gao <G199209@gmail.com>
  */
 
 
@@ -105,7 +108,7 @@
 #define Trp			0x0	/* 2clk */
 #define Trc			0x3	/* 7clk */
 #define Tchr			0x2	/* 3clk */
-#define REFCNT			1113	/* period=15.6us, HCLK=60Mhz, (2048+1-15.6*60) */
+#define REFCNT			1268	/* period=7.81us, HCLK=100Mhz, (2048+1-7.81*100) */
 /**************************************/
 
 .globl lowlevel_init
