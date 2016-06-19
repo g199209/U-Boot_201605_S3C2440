@@ -106,9 +106,25 @@ copyex:
 	ldr	r1, =S3C2440_MPLL_400M
 	str	r1, [r0]
 
+	/* Some delay between MPLL and UPLL */
+	mov	r0, #(1 << 13)
+	mov	r1, #0
+1:	
+	subs	r0, r0, #1
+	cmp	r0, r1
+	bne	1b
+
 	ldr	r0, =UPLLCON
 	ldr	r1, =S3C2440_UPLL_48M
 	str	r1, [r0]
+
+	/* Some delay */
+	mov	r0, #(1 << 14)
+	mov	r1, #0
+2:
+	subs	r0, r0, #1
+	cmp	r0, r1
+	bne	2b
 
 # else
 	/* FCLK:HCLK:PCLK = 1:2:4 */

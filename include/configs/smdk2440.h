@@ -18,8 +18,8 @@
  * (easy to change)
  */
 #define CONFIG_S3C24X0		/* This is a SAMSUNG S3C24x0-type SoC */
-#define CONFIG_S3C2410		/* specifically a SAMSUNG S3C2410 SoC */
-#define CONFIG_SMDK2410		/* on a SAMSUNG SMDK2410 Board */
+#define CONFIG_S3C2440		/* specifically a SAMSUNG S3C2440 SoC */
+#define CONFIG_SMDK2440		/* on a SAMSUNG SMDK2440 Board */
 
 #define CONFIG_SYS_TEXT_BASE	0x0
 
@@ -43,7 +43,7 @@
  * select serial console configuration
  */
 #define CONFIG_S3C24X0_SERIAL
-#define CONFIG_SERIAL1		1	/* we use SERIAL 1 on SMDK2410 */
+#define CONFIG_SERIAL1		1	/* we use SERIAL 1 on SMDK2440 */
 
 /************************************************************
  * USB support (currently only works with D-cache off)
@@ -86,8 +86,8 @@
 #define CONFIG_ZERO_BOOTDELAY_CHECK
 
 #define CONFIG_NETMASK		255.255.255.0
-#define CONFIG_IPADDR		10.0.0.110
-#define CONFIG_SERVERIP		10.0.0.1
+#define CONFIG_IPADDR		192.168.1.77
+#define CONFIG_SERVERIP		192.168.1.11
 
 #if defined(CONFIG_CMD_KGDB)
 #define CONFIG_KGDB_BAUDRATE	115200	/* speed to run kgdb serial port */
