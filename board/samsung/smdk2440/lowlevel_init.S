@@ -38,8 +38,8 @@
 
 #define B1_BWSCON		(DW32)
 #define B2_BWSCON		(DW16)
-#define B3_BWSCON		(DW16 + WAIT + UBLB)
-#define B4_BWSCON		(DW16)
+#define B3_BWSCON		(DW16 + UBLB)
+#define B4_BWSCON		(DW16 + WAIT + UBLB)
 #define B5_BWSCON		(DW16)
 #define B6_BWSCON		(DW32)
 #define B7_BWSCON		(DW32)

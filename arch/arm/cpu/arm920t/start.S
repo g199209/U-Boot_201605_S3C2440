@@ -83,6 +83,7 @@ copyex:
 	ldr	r0, =INTSUBMSK
 	str	r1, [r0]
 # endif
+
 /* Initialize Clock */
 # if defined(CONFIG_S3C2440)
 	#define MPLLCON	0x4C000004
