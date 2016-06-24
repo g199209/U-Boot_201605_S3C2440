@@ -86,5 +86,5 @@ ulong board_flash_get_legacy(ulong base, int banknum, flash_info_t *info)
 	info->portwidth = FLASH_CFI_16BIT;
 	info->chipwidth = FLASH_CFI_BY16;
 	info->interface = FLASH_CFI_X16;
-	return 1;
+	return 0;
 }

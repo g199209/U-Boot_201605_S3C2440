@@ -15,7 +15,7 @@
  */
 
 /* The DEBUG define must be before common to enable debugging */
-/* #define DEBUG */
+// #define DEBUG
 
 #include <common.h>
 #include <console.h>
@@ -2349,8 +2349,6 @@ unsigned long flash_init (void)
 {
 	unsigned long size = 0;
 	int i;
-
-	printf("\nFlash_init()\n");
 
 #ifdef CONFIG_SYS_FLASH_PROTECTION
 	/* read environment from EEPROM */
