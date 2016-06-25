@@ -124,6 +124,8 @@ static void DM9000_iow(int reg, u8 value);
 #define DM9000_inl(r) __raw_readl(r)
 #endif
 
+#define CONFIG_DM9000_DEBUG
+
 #ifdef CONFIG_DM9000_DEBUG
 static void
 dump_regs(void)
@@ -622,6 +624,8 @@ dm9000_phy_write(int reg, u16 value)
 int dm9000_initialize(bd_t *bis)
 {
 	struct eth_device *dev = &(dm9000_info.netdev);
+
+	printf("\ndm9000_intialize()\n");
 
 	/* Load MAC address from EEPROM */
 	dm9000_get_enetaddr(dev);

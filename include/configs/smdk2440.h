@@ -35,9 +35,13 @@
 /*
  * Hardware drivers
  */
-#define CONFIG_CS8900		/* we have a CS8900 on-board */
-#define CONFIG_CS8900_BASE	0x19000300
-#define CONFIG_CS8900_BUS16	/* the Linux driver does accesses as shorts */
+#define CONFIG_DRIVER_DM9000
+#define CONFIG_DM9000_NO_SROM       //not use the dm9000 eeprom
+#define CONFIG_NET_RANDOM_ETHADDR   //set the ethaddr
+#define CONFIG_LIB_RAND             //random_ethadd need rand function
+#define CONFIG_DM9000_BASE          0x20000000
+#define DM9000_IO                   CONFIG_DM9000_BASE      
+#define DM9000_DATA                 (CONFIG_DM9000_BASE + 4 ) //data address
 
 /*
  * select serial console configuration
@@ -160,8 +164,8 @@
  * NAND configuration
  */
 #ifdef CONFIG_CMD_NAND
-#define CONFIG_NAND_S3C2410
-#define CONFIG_SYS_S3C2410_NAND_HWECC
+#define CONFIG_NAND_S3C2440
+#define CONFIG_SYS_S3C2440_NAND_HWECC
 #define CONFIG_SYS_MAX_NAND_DEVICE	1
 #define CONFIG_SYS_NAND_BASE		0x4E000000
 #endif
