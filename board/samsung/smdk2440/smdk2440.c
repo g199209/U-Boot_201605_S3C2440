@@ -74,7 +74,7 @@ int board_eth_init(bd_t *bis)
 	rc = cs8900_initialize(0, CONFIG_CS8900_BASE);
 #endif
 
-#ifdef CONFIG_DM9000
+#ifdef CONFIG_DRIVER_DM9000
 	rc = dm9000_initialize(bis);
 #endif
 
