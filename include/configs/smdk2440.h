@@ -13,6 +13,9 @@
 #ifndef __CONFIG_H
 #define __CONFIG_H
 
+/* Commands */
+#define CONFIG_CMD_DOWNLOAD
+
 /*
  * High Level Configuration Options
  * (easy to change)
