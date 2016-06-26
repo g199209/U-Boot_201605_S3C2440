@@ -167,7 +167,3 @@ obj-$(CONFIG_CMD_BLOB) += blob.o
 obj-y += nvedit.o
 obj-y += disk.o
 
-# Add command
-obj-$(CONFIG_CMD_DOWNLOAD) += download.o
-
-
